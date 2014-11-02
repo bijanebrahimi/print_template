@@ -1,0 +1,38 @@
+.draggable{
+  width: 120px;
+  height: 25px;
+  background: black;
+  opacity: .8;
+  color: white;
+  
+  z-index: auto;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.draggable.grabbing .content{
+  cursor: grabbing;
+}
+
+.draggable .content {
+  height: 25px;
+  width: 96%;
+  float: left;
+  padding-right: 5px;
+  cursor: grab;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.draggable .handle {
+  height: 25px;
+  width: 2%;
+  cursor: ew-resize;
+  background: orange;
+}
+.draggable .handle.right {
+  float: right;
+}
+.draggable .handle.left {
+  float: left;
+}

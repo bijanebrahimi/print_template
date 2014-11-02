@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Javascript Print Template Designer</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="assets/css/print_template.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <h1>JavaScript <b>Print Template</b> Designer</h1>
+    
+    <div class="row">
+      <h2>Default</h2>
+      <pre><code>$(".cheque-example-1").print_template({
+  img: "assets/img/Check_Melli_p.png",
+  objects: [{id:"from_account_number", caption:"From Acc"},
+            {id:"to_account", caption:"To Account"},
+            {id:"price_numeric", caption:"Price (num)"},
+            {id:"price_alphabetic", caption:"Price (alpha)"},
+            {id:"date_numeric", caption:"Date (num)"},
+            {id:"date_alphabetic", caption:"Date (alpha)"}]
+})</code></pre>
+      <div class="cheque-example-1 col-md-8"></div>
+    </div>
+    <div class="row">
+      <h2>With predefined positions</h2>
+      <pre><code>$(".cheque-example-2").print_template({
+  img: "assets/img/Check_Melli_p.png",
+  objects: [{id:"from_account_number", caption:"From Acc", top:242, left:246, width:247, height:24},
+            {id:"to_account", caption:"To Account", top:167, left:137, width:397, height:24},
+            {id:"price_numeric", caption:"Price (num)", top:134, left:75, width:407, height:24},
+            {id:"price_alphabetic", caption:"Price (alpha)", top:206, left:426, width:136, height:24},
+            {id:"date_numeric", caption:"Date (num)", top:96, left:499, width:71, height:24},
+            {id:"date_alphabetic", caption:"Date (alpha)", top:95, left:230, width:208, height:24}]
+})</code></pre>
+      <div class="cheque-example-2 col-md-8"></div>
+    </div>
+    <div class="row">
+      <h2>Smaller Image size</h2>
+      <div class="cheque-example-3 col-md-6"></div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="assets/js/print_template.js"></script>
+    
+    <script type="text/javascript">
+      $(".cheque-example-1").print_template({
+        img: "assets/img/Check_Melli_p.png",
+        objects: [{id:"from_account_number", caption:"From Acc"},
+                  {id:"to_account", caption:"To Account"},
+                  {id:"price_numeric", caption:"Price (num)"},
+                  {id:"price_alphabetic", caption:"Price (alpha)"},
+                  {id:"date_numeric", caption:"Date (num)"},
+                  {id:"date_alphabetic", caption:"Date (alpha)"}]
+      })
+      $(".cheque-example-2").print_template({
+        img: "assets/img/Check_Melli_p.png",
+        objects: [{id:"from_account_number", caption:"From Acc", top:242, left:246, width:247, height:24},
+                  {id:"to_account", caption:"To Account", top:167, left:137, width:397, height:24},
+                  {id:"price_numeric", caption:"Price (num)", top:134, left:75, width:407, height:24},
+                  {id:"price_alphabetic", caption:"Price (alpha)", top:206, left:426, width:136, height:24},
+                  {id:"date_numeric", caption:"Date (num)", top:96, left:499, width:71, height:24},
+                  {id:"date_alphabetic", caption:"Date (alpha)", top:95, left:230, width:208, height:24}]
+      })
+      $(".cheque-example-3").print_template({
+        img: "assets/img/Check_Melli_p.png",
+        objects: [{id:"from_account_number", caption:"From Acc", top:242, left:246, width:247, height:24},
+                  {id:"to_account", caption:"To Account", top:167, left:137, width:397, height:24},
+                  {id:"price_numeric", caption:"Price (num)", top:134, left:75, width:407, height:24},
+                  {id:"price_alphabetic", caption:"Price (alpha)", top:206, left:426, width:136, height:24},
+                  {id:"date_numeric", caption:"Date (num)", top:96, left:499, width:71, height:24},
+                  {id:"date_alphabetic", caption:"Date (alpha)", top:95, left:230, width:208, height:24}]
+      })
+    </script>
+  </body>
+</html>
